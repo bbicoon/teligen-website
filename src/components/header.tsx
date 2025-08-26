@@ -55,10 +55,12 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* 데스크톱 AI 컨설팅 버튼 */}
+          {/* 데스크톱 TEST 버튼 */}
           <div className="hidden md:block">
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white">
-              AI 컨설팅
+            <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white">
+              <Link href="https://service.teligen.co.kr" target="_blank">
+                TEST
+              </Link>
             </Button>
           </div>
 
@@ -92,8 +94,10 @@ const Header = () => {
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                  AI 컨설팅
+                <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                  <Link href="https://service.teligen.co.kr" target="_blank">
+                    TEST
+                  </Link>
                 </Button>
               </div>
             </div>

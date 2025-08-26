@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { BrainCircuit, MonitorSmartphone } from "lucide-react";
+import { MonitorSmartphone, Package, ShoppingCart, Smartphone } from "lucide-react";
 
 const SolutionsSection = () => {
   return (
@@ -8,42 +8,76 @@ const SolutionsSection = () => {
         {/* 섹션 제목 */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            비즈니스의 핵심을 바꾸는 두 가지 솔루션
+            텔리젠 핵심 솔루션
           </h2>
         </div>
 
         {/* 솔루션 카드들 */}
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-          {/* 첫 번째 카드 - AI 상담 솔루션 */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+          {/* 첫 번째 카드 - 키오스크 */}
           <Card className="hover:shadow-lg transition-shadow duration-300 border-0 shadow-md">
             <CardHeader className="text-center pb-4">
               <div className="mx-auto mb-4 w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
-                <BrainCircuit className="w-8 h-8 text-blue-600" />
+                <MonitorSmartphone className="w-8 h-8 text-blue-600" />
               </div>
               <CardTitle className="text-2xl font-bold text-gray-900">
-                AI 상담 솔루션
+                키오스크
               </CardTitle>
             </CardHeader>
             <CardContent className="text-center">
               <CardDescription className="text-lg text-gray-600 leading-relaxed">
-                24시간 자동 응대, 고객 데이터 분석, 맞춤형 컨설팅을 통해 비즈니스 효율을 극대화합니다.
+                다양한 업종에 최적화된 무인 주문 및 결제 시스템으로 운영 효율을 높여보세요.
               </CardDescription>
             </CardContent>
           </Card>
 
-          {/* 두 번째 카드 - 무인결제 키오스크 */}
+          {/* 두 번째 카드 - 자동판매기 */}
           <Card className="hover:shadow-lg transition-shadow duration-300 border-0 shadow-md">
             <CardHeader className="text-center pb-4">
               <div className="mx-auto mb-4 w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
-                <MonitorSmartphone className="w-8 h-8 text-green-600" />
+                <Package className="w-8 h-8 text-green-600" />
               </div>
               <CardTitle className="text-2xl font-bold text-gray-900">
-                무인결제 키오스크
+                자동판매기
               </CardTitle>
             </CardHeader>
             <CardContent className="text-center">
               <CardDescription className="text-lg text-gray-600 leading-relaxed">
-                직관적인 UI/UX와 안정적인 결제 시스템으로 어떤 업종에서든 최적의 무인 운영 환경을 제공합니다.
+                최신 기술이 적용된 스마트 자판기로 24시간 무인 판매 솔루션을 구축할 수 있습니다.
+              </CardDescription>
+            </CardContent>
+          </Card>
+
+          {/* 세 번째 카드 - 유통포스 프로그램 */}
+          <Card className="hover:shadow-lg transition-shadow duration-300 border-0 shadow-md">
+            <CardHeader className="text-center pb-4">
+              <div className="mx-auto mb-4 w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center">
+                <ShoppingCart className="w-8 h-8 text-purple-600" />
+              </div>
+              <CardTitle className="text-2xl font-bold text-gray-900">
+                유통포스 프로그램
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-center">
+              <CardDescription className="text-lg text-gray-600 leading-relaxed">
+                재고 관리부터 고객 관리까지, 유통업에 특화된 전문 POS 프로그램으로 매장을 스마트하게 관리하세요.
+              </CardDescription>
+            </CardContent>
+          </Card>
+
+          {/* 네 번째 카드 - 앱링커 */}
+          <Card className="hover:shadow-lg transition-shadow duration-300 border-0 shadow-md">
+            <CardHeader className="text-center pb-4">
+              <div className="mx-auto mb-4 w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center">
+                <Smartphone className="w-8 h-8 text-orange-600" />
+              </div>
+              <CardTitle className="text-2xl font-bold text-gray-900">
+                앱링커
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-center">
+              <CardDescription className="text-lg text-gray-600 leading-relaxed">
+                언제 어디서든 모바일 앱으로 매장 장비를 원격으로 제어하고 상태를 확인할 수 있습니다.
               </CardDescription>
             </CardContent>
           </Card>

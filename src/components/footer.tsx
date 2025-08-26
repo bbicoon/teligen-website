@@ -7,8 +7,10 @@ const Footer = () => {
     {
       title: "솔루션",
       links: [
-        { name: "AI 상담 솔루션", href: "/solutions" },
-        { name: "무인결제 키오스크", href: "/solutions" },
+        { name: "키오스크", href: "/solutions" },
+        { name: "자동판매기", href: "/solutions" },
+        { name: "유통포스 프로그램", href: "/solutions" },
+        { name: "앱링커", href: "/solutions" },
       ],
     },
     {
@@ -19,32 +21,38 @@ const Footer = () => {
         { name: "채용", href: "/careers" },
       ],
     },
-    {
-      title: "고객지원",
-      links: [
-        { name: "도움말 센터", href: "/help" },
-        { name: "서비스 약관", href: "/terms" },
-        { name: "개인정보처리방침", href: "/privacy" },
-      ],
-    },
   ];
 
   return (
     <footer className="bg-gray-800 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* 메인 푸터 콘텐츠 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          {/* 1단: 로고 및 슬로건 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+          {/* 1단: 로고 및 회사 정보 */}
           <div className="lg:col-span-1">
             <div className="mb-6">
               <h3 className="text-2xl font-bold text-white mb-4">TELIGEN</h3>
-              <p className="text-gray-300 leading-relaxed">
-                AI 기술로 비즈니스를 혁신합니다.
+              <p className="text-gray-300 leading-relaxed mb-4">
+                매장 자동화의 모든 것
               </p>
+              
+              {/* 회사 주소 */}
+              <div className="mb-4">
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  서울특별시 금천구 가산디지털1로 196, 305호
+                </p>
+              </div>
+              
+              {/* 연락처 */}
+              <div className="mb-4">
+                <p className="text-gray-300 text-sm">
+                  <span className="font-medium">연락처:</span> 1577-2220
+                </p>
+              </div>
             </div>
           </div>
 
-          {/* 2단, 3단, 4단: 링크 섹션들 */}
+          {/* 2단, 3단: 링크 섹션들 */}
           {footerSections.map((section) => (
             <div key={section.title}>
               <h4 className="text-lg font-semibold text-white mb-4">
