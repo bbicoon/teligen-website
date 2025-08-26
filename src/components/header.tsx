@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
@@ -17,7 +18,12 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const menuItems = ["솔루션", "구축사례", "미디어", "회사소개"];
+  const menuItems = [
+    { name: "솔루션", href: "/solutions" },
+    { name: "구축사례", href: "#" },
+    { name: "미디어", href: "#" },
+    { name: "회사소개", href: "#" },
+  ];
 
   return (
     <header
@@ -31,19 +37,21 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* 로고 */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-gray-900">TELIGEN</h1>
+            <Link href="/" className="text-2xl font-bold text-gray-900 hover:text-gray-700 transition-colors">
+              TELIGEN
+            </Link>
           </div>
 
           {/* 데스크톱 메뉴 */}
           <nav className="hidden md:flex items-center space-x-8">
             {menuItems.map((item) => (
-              <a
-                key={item}
-                href="#"
+              <Link
+                key={item.name}
+                href={item.href}
                 className="text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium"
               >
-                {item}
-              </a>
+                {item.name}
+              </Link>
             ))}
           </nav>
 
@@ -74,14 +82,14 @@ const Header = () => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-md rounded-lg mt-2 shadow-lg">
               {menuItems.map((item) => (
-                <a
-                  key={item}
-                  href="#"
+                <Link
+                  key={item.name}
+                  href={item.href}
                   className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200 font-medium"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  {item}
-                </a>
+                  {item.name}
+                </Link>
               ))}
               <div className="px-3 py-2">
                 <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">

@@ -29,30 +29,72 @@ const ChatModal = () => {
     },
   ]);
   const [inputValue, setInputValue] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSendMessage = () => {
-    if (!inputValue.trim()) return;
+  const handleSendMessage = async () => {
+    if (!inputValue.trim() || isLoading) return;
 
-    const newMessage: Message = {
+    const userMessage: Message = {
       id: messages.length + 1,
       text: inputValue,
       isUser: true,
       timestamp: new Date(),
     };
 
-    setMessages([...messages, newMessage]);
+    setMessages(prev => [...prev, userMessage]);
     setInputValue("");
+    setIsLoading(true);
 
-    // AI 응답 시뮬레이션 (실제로는 API 호출)
-    setTimeout(() => {
+    try {
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          message: inputValue,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('API 요청에 실패했습니다.');
+      }
+
+      const data = await response.json();
+      
       const aiResponse: Message = {
         id: messages.length + 2,
-        text: "문의해주신 내용을 확인했습니다. 곧 담당자가 연락드리겠습니다.",
+        text: data.response || "죄송합니다. 응답을 처리하는 중에 오류가 발생했습니다.",
         isUser: false,
         timestamp: new Date(),
       };
+
       setMessages(prev => [...prev, aiResponse]);
-    }, 1000);
+    } catch (error) {
+      console.error('Chat API Error:', error);
+      
+      const errorResponse: Message = {
+        id: messages.length + 2,
+        text: "죄송합니다. 일시적인 오류가 발생했습니다. 잠시 후 다시 시도해주세요.",
+        isUser: false,
+        timestamp: new Date(),
+      };
+
+      setMessages(prev => [...prev, errorResponse]);
+    } finally {
+      setIsLoading(false);
+    }
+
+    // AI 응답 시뮬레이션 (실제로는 API 호출)
+    // setTimeout(() => {
+    //   const aiResponse: Message = {
+    //     id: messages.length + 2,
+    //     text: "문의해주신 내용을 확인했습니다. 곧 담당자가 연락드리겠습니다.",
+    //     isUser: false,
+    //     timestamp: new Date(),
+    //   };
+    //   setMessages(prev => [...prev, aiResponse]);
+    // }, 1000);
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -109,6 +151,13 @@ const ChatModal = () => {
                 </div>
               </div>
             ))}
+            {isLoading && (
+              <div className="flex justify-start">
+                <div className="max-w-[80%] p-3 rounded-lg bg-white text-gray-900 border">
+                  <p className="text-sm">AI가 응답을 생성하고 있습니다...</p>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* 입력 영역 */}
@@ -119,10 +168,11 @@ const ChatModal = () => {
               onKeyPress={handleKeyPress}
               placeholder="메시지를 입력하세요..."
               className="flex-1"
+              disabled={isLoading}
             />
             <Button
               onClick={handleSendMessage}
-              disabled={!inputValue.trim()}
+              disabled={!inputValue.trim() || isLoading}
               size="icon"
               className="bg-blue-600 hover:bg-blue-700"
             >
