@@ -2,12 +2,14 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,7 +50,11 @@ const Header = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium"
+                className={`${
+                  pathname === item.href
+                    ? "text-blue-600"
+                    : "text-gray-700"
+                } hover:text-gray-900 transition-colors duration-200 font-medium`}
               >
                 {item.name}
               </Link>
@@ -87,7 +93,11 @@ const Header = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200 font-medium"
+                  className={`block px-3 py-2 ${
+                    pathname === item.href
+                      ? "text-blue-600 bg-blue-50"
+                      : "text-gray-700"
+                  } hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200 font-medium`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}

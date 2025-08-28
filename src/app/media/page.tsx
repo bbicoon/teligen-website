@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: '미디어 - TELIGEN',
+  description: '텔리젠의 최신 소식, 보도자료, 업계 동향을 전해드립니다.',
+};
+
 export default function MediaPage() {
   return (
     <main className="pt-24 min-h-screen bg-white">

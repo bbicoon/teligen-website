@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: '솔루션 - TELIGEN',
+  description: '키오스크, 자동판매기, 유통포스, 앱링커 등 텔리젠의 혁신적인 매장 자동화 솔루션을 만나보세요.',
+};
+
 export default function SolutionsPage() {
   return (
     <main className="pt-24 min-h-screen bg-white">

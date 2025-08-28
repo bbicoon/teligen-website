@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: '회사소개 - TELIGEN',
+  description: '매장 자동화 솔루션의 미래를 선도하는 텔리젠의 비전과 가치.',
+};
+
 export default function AboutPage() {
   return (
     <main className="pt-24 min-h-screen bg-white">
