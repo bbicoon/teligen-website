@@ -20,9 +20,9 @@ const Header = () => {
 
   const menuItems = [
     { name: "솔루션", href: "/solutions" },
-    { name: "구축사례", href: "#" },
-    { name: "미디어", href: "#" },
-    { name: "회사소개", href: "#" },
+    { name: "구축사례", href: "/portfolio" },
+    { name: "미디어", href: "/media" },
+    { name: "회사소개", href: "/about" },
   ];
 
   return (
