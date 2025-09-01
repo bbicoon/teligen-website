@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -17,8 +18,7 @@ const Footer = () => {
       title: "회사",
       links: [
         { name: "회사소개", href: "/about" },
-        { name: "뉴스룸", href: "/news" },
-        { name: "채용", href: "/careers" },
+        { name: "미디어", href: "/media" },
       ],
     },
   ];
@@ -31,7 +31,15 @@ const Footer = () => {
           {/* 1단: 로고 및 회사 정보 */}
           <div className="lg:col-span-1">
             <div className="mb-6">
-              <h3 className="text-2xl font-bold text-white mb-4">TELIGEN</h3>
+              <Link href="/">
+                <Image
+                  src="/teligen-logo.png"
+                  alt="TELIGEN 로고"
+                  width={120}
+                  height={30}
+                  className="mb-4"
+                />
+              </Link>
               <p className="text-gray-300 leading-relaxed mb-4">
                 매장 자동화의 모든 것
               </p>

@@ -21,10 +21,6 @@ const ContactSection = () => {
           업무시간: 평일 09:00 ~ 18:00 (점심시간 12:00 ~ 13:00)
         </p>
 
-        {/* 문의하기 버튼 */}
-        <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg">
-          문의하기
-        </Button>
       </div>
     </section>
   );

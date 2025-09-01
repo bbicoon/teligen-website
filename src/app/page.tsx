@@ -7,7 +7,9 @@ export default function Home() {
     <main>
       <HeroSection />
       <SolutionsSection />
-      <ContactSection />
+      <section id="contact">
+        <ContactSection />
+      </section>
     </main>
   );
 }

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -19,11 +20,11 @@ const HeroSection = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg">
-            솔루션 전체 보기
+          <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg" asChild>
+            <Link href="/solutions">솔루션 전체 보기</Link>
           </Button>
-          <Button size="lg" variant="secondary" className="px-8 py-3 text-lg">
-            도입 문의하기
+          <Button size="lg" variant="secondary" className="px-8 py-3 text-lg" asChild>
+            <Link href="#contact">도입 문의하기</Link>
           </Button>
         </div>
       </div>

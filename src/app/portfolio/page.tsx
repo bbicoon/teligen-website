@@ -10,11 +10,12 @@ export const metadata: Metadata = {
 
 const portfolioItems = [
   {
-    client: "메가딜 커피",
-    industry: "프랜차이즈 카페",
-    solution: "키오스크 200대",
-    description: "전국 100여 개 매장에 키오스크를 도입하여 피크타임 주문 처리 속도를 50% 향상시키고 인건비를 절감했습니다.",
-    image: "https://placehold.co/600x400/3b82f6/ffffff?text=MegaDeal+Coffee"
+    client: "꼬똥이네",
+    industry: "애견 복합 문화공간",
+    solution: "키오스크",
+    description: "김포 최대 규모의 애견 운동장 '꼬똥이네'에 주문 및 결제 키오스크를 설치했습니다. 방문객들은 키오스크를 통해 수영장, 운동장 등 편의시설 이용과 함께 식음료를 간편하게 주문하여 고객 편의성과 매장 운영 효율을 크게 높였습니다.",
+    image: "https://placehold.co/600x400/f59e0b/ffffff?text=꼬똥이네",
+    link: "https://blog.naver.com/teligen/223691121301"
   },
   {
     client: "스마트 스터디카페",
@@ -57,7 +58,20 @@ export default function PortfolioPage() {
             <Card key={item.client} className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <Image src={item.image} alt={`${item.client} 구축사례 이미지`} width={600} height={400} className="w-full h-64 object-cover" />
               <CardHeader>
-                <CardTitle className="text-2xl">{item.client}</CardTitle>
+                <CardTitle className="text-2xl">
+                  {item.link ? (
+                    <a 
+                      href={item.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 transition-colors"
+                    >
+                      {item.client}
+                    </a>
+                  ) : (
+                    item.client
+                  )}
+                </CardTitle>
                 <div className="flex gap-2 pt-2">
                   <Badge variant="secondary">{item.industry}</Badge>
                   <Badge variant="outline">{item.solution}</Badge>

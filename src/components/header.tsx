@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -39,8 +40,14 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* 로고 */}
           <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-bold text-gray-900 hover:text-gray-700 transition-colors">
-              TELIGEN
+            <Link href="/">
+              <Image
+                src="/teligen-logo.png"
+                alt="TELIGEN 로고"
+                width={120}
+                height={30}
+                priority
+              />
             </Link>
           </div>
 

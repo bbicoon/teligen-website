@@ -5,29 +5,8 @@ import { Badge } from '@/components/ui/badge';
 
 export const metadata: Metadata = {
   title: '미디어 - TELIGEN',
-  description: '텔리젠의 최신 소식, 보도자료, 업계 동향을 전해드립니다.',
+  description: '키오스크 관련 최신 뉴스와 유튜브 영상을 만나보세요.',
 };
-
-const mediaItems = [
-  {
-    category: "보도자료",
-    title: "텔리젠, '스마트 상점' 부문 기술혁신 대상 수상",
-    date: "2025년 8월 15일",
-    excerpt: "텔리젠이 자체 개발한 유통 전문 POS와 앱링커 솔루션의 기술력을 인정받아 '2025 스마트 상점 기술혁신 대상'을 수상했습니다."
-  },
-  {
-    category: "업데이트",
-    title: "앱링커 2.0 출시: 더욱 강력해진 원격 관리 기능",
-    date: "2025년 7월 28일",
-    excerpt: "사용자 피드백을 반영하여 UI를 개선하고, 다중 기기 제어 기능을 추가한 앱링커 2.0 버전을 새롭게 출시했습니다."
-  },
-  {
-    category: "기술 동향",
-    title: "2025년 무인 매장 트렌드: 키오스크를 넘어 스마트 자판기로",
-    date: "2025년 6월 10일",
-    excerpt: "단순 결제를 넘어 재고 관리와 데이터 분석까지 가능한 스마트 자판기가 새로운 무인 매장의 핵심으로 떠오르고 있습니다."
-  }
-];
 
 export default function MediaPage() {
   return (
@@ -38,27 +17,57 @@ export default function MediaPage() {
             미디어
           </h1>
           <p className="text-lg text-gray-600">
-            텔리젠 관련 뉴스, 보도자료, 기술 동향 등 최신 소식을 전해드립니다.
+            키오스크 관련 최신 뉴스와 유튜브 영상을 제공합니다.
           </p>
         </div>
 
-        <div className="space-y-8">
-          {mediaItems.map((item) => (
-            <Card key={item.title}>
-              <CardHeader>
-                <div className="flex items-center gap-4 mb-2">
-                  <Badge>{item.category}</Badge>
-                  <p className="text-sm text-gray-500">{item.date}</p>
-                </div>
-                <CardTitle className="text-2xl">{item.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base mb-4">{item.excerpt}</CardDescription>
-                <Button variant="link" className="p-0">자세히 보기 →</Button>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        {/* 뉴스 섹션 */}
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">키오스크 뉴스</h2>
+          <div className="space-y-8">
+            {/* 향후 이곳에 뉴스 목록이 표시됩니다. */}
+            <p className="text-center text-gray-500 py-8">등록된 뉴스가 없습니다.</p>
+            {/* 
+              <Card>
+                <CardHeader>
+                  <div className="flex items-center gap-4 mb-2">
+                    <Badge>카테고리</Badge>
+                    <p className="text-sm text-gray-500">YYYY년 MM월 DD일</p>
+                  </div>
+                  <CardTitle className="text-2xl">뉴스 제목</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-base mb-4">뉴스 요약 내용</CardDescription>
+                  <Button variant="link" className="p-0">자세히 보기 →</Button>
+                </CardContent>
+              </Card>
+            */}
+          </div>
+        </section>
+
+        {/* 유튜브 영상 섹션 */}
+        <section>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">키오스크 관련 영상</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* 향후 이곳에 유튜브 영상이 표시됩니다. */}
+            <div className="md:col-span-2 text-center text-gray-500 py-8">
+              <p>등록된 영상이 없습니다.</p>
+            </div>
+            {/*
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-2xl">영상 제목</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="aspect-video mb-4 bg-gray-200 flex items-center justify-center rounded-md">
+                    <p className="text-gray-500">유튜브 영상 영역</p>
+                  </div>
+                  <CardDescription className="text-base">영상에 대한 설명</CardDescription>
+                </CardContent>
+              </Card>
+            */}
+          </div>
+        </section>
       </div>
     </main>
   );
