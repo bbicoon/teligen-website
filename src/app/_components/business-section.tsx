@@ -3,7 +3,7 @@ import { MonitorSmartphone, Package, ShoppingCart } from "lucide-react";
 import Image from "next/image";
 // import { motion } from "framer-motion";
 
-const SolutionsSection = () => {
+const BusinessSection = () => {
   // const containerVariants = {
   //   hidden: { opacity: 0 },
   //   visible: {
@@ -27,14 +27,14 @@ const SolutionsSection = () => {
   // };
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* 섹션 제목 */}
         <div 
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            텔리젠 핵심 솔루션
+            텔리젠 핵심 사업 분야
           </h2>
         </div>
 
@@ -130,4 +130,4 @@ const SolutionsSection = () => {
   );
 };
 
-export default SolutionsSection;
+export default BusinessSection;

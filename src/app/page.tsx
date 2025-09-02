@@ -1,12 +1,12 @@
 import HeroSection from "./_components/hero-section";
-import SolutionsSection from "./_components/solutions-section";
+import BusinessSection from "./_components/business-section";
 import ContactSection from "./_components/contact-section";
 
 export default function Home() {
   return (
     <main>
       <HeroSection />
-      <SolutionsSection />
+      <BusinessSection />
       <section id="contact">
         <ContactSection />
       </section>

@@ -22,7 +22,7 @@ const Header = () => {
   }, []);
 
   const menuItems = [
-    { name: "솔루션", href: "/solutions" },
+    { name: "사업 분야", href: "/business" },
     { name: "구축사례", href: "/portfolio" },
     { name: "미디어", href: "/media" },
     { name: "회사소개", href: "/about" },
