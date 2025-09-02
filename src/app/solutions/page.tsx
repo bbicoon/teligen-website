@@ -31,7 +31,8 @@ const solutions = [
     name: "앱링커 (원격 제어)",
     description: "텔리젠의 모든 자동화 기기를 스마트폰 하나로 관리하세요. 앱링커를 통해 언제 어디서든 매장 상황을 확인하고 기기를 원격으로 제어할 수 있습니다.",
     features: ["실시간 기기 상태 모니터링", "원격 전원 제어 및 재부팅", "오류 발생 시 실시간 알림", "모바일 대시보드 제공"],
-    image: "/placeholder-app.svg"
+    image: "/placeholder-app.svg",
+    downloadLink: "https://play.google.com/store/apps/details?id=com.zeonix.applinker"
   }
 ];
 
@@ -62,10 +63,70 @@ export default function SolutionsPage() {
                     </li>
                   ))}
                 </ul>
+                
+                {/* 앱링커인 경우 구글 플레이 다운로드 링크 표시 */}
+                {solution.downloadLink && (
+                  <div className="mt-8">
+                    <a 
+                      href={solution.downloadLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block"
+                    >
+                                             <Image 
+                         src="/google-play logo.png"
+                         alt="Google Play Store에서 다운로드"
+                         width={180}
+                         height={54}
+                         className="h-14 w-auto hover:opacity-80 transition-opacity"
+                       />
+                    </a>
+                    <p className="text-sm text-gray-500 mt-2">
+                      구글 플레이 스토어에서 앱링커를 다운로드하세요
+                    </p>
+                  </div>
+                )}
               </div>
               <div className={`flex items-center justify-center bg-gray-100 rounded-lg p-8 h-80 ${index % 2 !== 0 ? 'lg:col-start-1' : ''}`}>
-                {/* 가상 이미지 Placeholder */}
-                <Image src="https://placehold.co/400x300/e2e8f0/adb5bd?text=Image" alt={`${solution.name} 이미지`} width={400} height={300} className="rounded-md" />
+                {/* 각 솔루션별 실제 이미지 또는 아이콘 표시 */}
+                {solution.name === "키오스크" ? (
+                  <Image 
+                    src="/kiosk.png"
+                    alt="키오스크 이미지"
+                    width={320}
+                    height={240}
+                    className="rounded-md object-contain"
+                  />
+                ) : solution.name === "자동판매기" ? (
+                  <Image 
+                    src="/vending machine.png"
+                    alt="자동판매기 이미지"
+                    width={320}
+                    height={240}
+                    className="rounded-md object-contain"
+                  />
+                ) : solution.name === "유통포스 프로그램" ? (
+                  <Image 
+                    src="/webpos.png"
+                    alt="유통포스 프로그램 이미지"
+                    width={448}
+                    height={336}
+                    className="rounded-md object-contain"
+                  />
+                ) : solution.name === "앱링커 (원격 제어)" ? (
+                  <div className="flex flex-col items-center">
+                    <Image 
+                      src="/applinker-icon.webp"
+                      alt="앱링커 아이콘"
+                      width={120}
+                      height={120}
+                      className="rounded-lg mb-4"
+                    />
+                    <p className="text-gray-600 font-medium">앱링커</p>
+                  </div>
+                ) : (
+                  <Image src="https://placehold.co/400x300/e2e8f0/adb5bd?text=Image" alt={`${solution.name} 이미지`} width={400} height={300} className="rounded-md" />
+                )}
               </div>
             </div>
           ))}

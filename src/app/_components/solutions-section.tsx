@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { MonitorSmartphone, Package, ShoppingCart, Smartphone } from "lucide-react";
+import { MonitorSmartphone, Package, ShoppingCart } from "lucide-react";
+import Image from "next/image";
 // import { motion } from "framer-motion";
 
 const SolutionsSection = () => {
@@ -103,7 +104,14 @@ const SolutionsSection = () => {
             <Card className="hover:shadow-lg transition-shadow duration-300 border-0 shadow-md">
               <CardHeader className="text-center pb-4">
                 <div className="mx-auto mb-4 w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center">
-                  <Smartphone className="w-8 h-8 text-orange-600" />
+                  {/* 앱링커 아이콘 이미지 - webp 형식 사용 */}
+                  <Image 
+                    src="/applinker-icon.webp" 
+                    alt="앱링커 아이콘" 
+                    width={32} 
+                    height={32}
+                    className="w-8 h-8"
+                  />
                 </div>
                 <CardTitle className="text-2xl font-bold text-gray-900">
                   앱링커
