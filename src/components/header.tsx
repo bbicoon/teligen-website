@@ -68,11 +68,11 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* 데스크톱 TEST 버튼 */}
+          {/* 데스크톱 LOGIN 버튼 */}
           <div className="hidden md:block">
             <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white">
               <Link href="https://service.teligen.co.kr" target="_blank">
-                TEST
+                LOGIN
               </Link>
             </Button>
           </div>
@@ -113,7 +113,7 @@ const Header = () => {
               <div className="px-3 py-2">
                 <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white">
                   <Link href="https://service.teligen.co.kr" target="_blank">
-                    TEST
+                    LOGIN
                   </Link>
                 </Button>
               </div>
