@@ -4,9 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "build": "next build",
+    "build:analyze": "ANALYZE=true next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "clean": "rimraf .next out dist",
+    "export": "next build && next export"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.15",
@@ -28,6 +31,9 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.5.0",
+    "imagemin": "^9.0.1",
+    "imagemin-webp": "^8.0.0",
+    "sharp": "^0.34.3",
     "tailwindcss": "^4",
     "tw-animate-css": "^1.3.7",
     "typescript": "^5"

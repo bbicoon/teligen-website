@@ -1,7 +1,4 @@
 import type { Metadata } from 'next';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 
 export const metadata: Metadata = {
   title: '미디어 - TELIGEN',

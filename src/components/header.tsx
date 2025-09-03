@@ -42,7 +42,7 @@ const Header = () => {
           <div className="flex-shrink-0">
             <Link href="/">
               <Image
-                src="/teligen-logo.png"
+                src="/teligen-logo.webp"
                 alt="TELIGEN 로고"
                 width={120}
                 height={30}

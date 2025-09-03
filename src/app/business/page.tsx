@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -74,7 +73,7 @@ export default function SolutionsPage() {
                       className="inline-block"
                     >
                                              <Image 
-                         src="/google-play logo.png"
+                         src="/google-play logo.webp"
                          alt="Google Play Store에서 다운로드"
                          width={180}
                          height={54}
@@ -89,30 +88,30 @@ export default function SolutionsPage() {
               </div>
               <div className={`flex items-center justify-center bg-gray-100 rounded-lg p-8 h-80 ${index % 2 !== 0 ? 'lg:col-start-1' : ''}`}>
                 {/* 각 솔루션별 실제 이미지 또는 아이콘 표시 */}
-                {solution.name === "키오스크" ? (
-                  <Image 
-                    src="/kiosk.png"
-                    alt="키오스크 이미지"
-                    width={320}
-                    height={240}
-                    className="rounded-md object-contain"
-                  />
-                ) : solution.name === "자동판매기" ? (
-                  <Image 
-                    src="/vending machine.png"
-                    alt="자동판매기 이미지"
-                    width={320}
-                    height={240}
-                    className="rounded-md object-contain"
-                  />
-                ) : solution.name === "유통포스 프로그램" ? (
-                  <Image 
-                    src="/webpos.png"
-                    alt="유통포스 프로그램 이미지"
-                    width={448}
-                    height={336}
-                    className="rounded-md object-contain"
-                  />
+                                  {solution.name === "키오스크" ? (
+                    <Image 
+                      src="/kiosk.webp"
+                      alt="키오스크 이미지"
+                      width={320}
+                      height={240}
+                      className="rounded-md object-contain"
+                    />
+                  ) : solution.name === "자동판매기" ? (
+                    <Image 
+                      src="/vending machine.webp"
+                      alt="자동판매기 이미지"
+                      width={320}
+                      height={240}
+                      className="rounded-md object-contain"
+                    />
+                  ) : solution.name === "유통포스 프로그램" ? (
+                    <Image 
+                      src="/webpos.webp"
+                      alt="유통포스 프로그램 이미지"
+                      width={448}
+                      height={336}
+                      className="rounded-md object-contain"
+                    />
                 ) : solution.name === "앱링커 (원격 제어)" ? (
                   <div className="flex flex-col items-center">
                     <Image 
