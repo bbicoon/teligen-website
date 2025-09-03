@@ -8,10 +8,10 @@ const Footer = () => {
     {
       title: "솔루션",
       links: [
-        { name: "키오스크", href: "/solutions" },
-        { name: "자동판매기", href: "/solutions" },
-        { name: "유통포스 프로그램", href: "/solutions" },
-        { name: "앱링커", href: "/solutions" },
+        { name: "키오스크", href: "/business" },
+        { name: "자동판매기", href: "/business" },
+        { name: "유통포스 프로그램", href: "/business" },
+        { name: "앱링커", href: "/business" },
       ],
     },
     {
@@ -33,7 +33,7 @@ const Footer = () => {
             <div className="mb-6">
               <Link href="/">
                 <Image
-                  src="/teligen-logo.png"
+                  src="/teligen-logo.webp"
                   alt="TELIGEN 로고"
                   width={120}
                   height={30}

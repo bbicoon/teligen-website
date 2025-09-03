@@ -9,12 +9,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "TELIGEN - AI 기술로 비즈니스를 혁신합니다",
-  description: "텔리젠의 AI 상담 솔루션과 무인결제 키오스크로 비즈니스 효율을 극대화하세요.",
+  title: {
+    default: 'TELIGEN - 매장 자동화 솔루션',
+    template: '%s | TELIGEN'
+  },
+  description: '키오스크, 자동판매기, 유통포스, 앱링커 등 매장 자동화에 필요한 모든 솔루션을 제공합니다.',
   icons: {
-    icon: '/teligen-logo.png',
-    shortcut: '/teligen-logo.png',
-    apple: '/teligen-logo.png',
+    icon: '/teligen-logo.webp',
+    shortcut: '/teligen-logo.webp',
+    apple: '/teligen-logo.webp',
   },
 };
 
