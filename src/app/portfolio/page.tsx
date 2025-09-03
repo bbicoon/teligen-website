@@ -14,29 +14,29 @@ const portfolioItems = [
     industry: "애견 복합 문화공간",
     solution: "키오스크",
     description: "김포 최대 규모의 애견 운동장 '꼬똥이네'에 주문 및 결제 키오스크를 설치했습니다. 방문객들은 키오스크를 통해 수영장, 운동장 등 편의시설 이용과 함께 식음료를 간편하게 주문하여 고객 편의성과 매장 운영 효율을 크게 높였습니다.",
-    image: "https://placehold.co/600x400/f59e0b/ffffff?text=꼬똥이네",
+    image: "/ggoddong.webp",
     link: "https://blog.naver.com/teligen/223691121301"
   },
   {
-    client: "스마트 스터디카페",
-    industry: "교육 공간",
+    client: "오피스25",
+    industry: "무인 문구점",
     solution: "키오스크 및 앱링커 연동",
-    description: "입/퇴실 관리 키오스크와 모바일 원격제어 앱링커를 연동하여 24시간 완벽한 무인 운영 시스템을 구축했습니다.",
-    image: "https://placehold.co/600x400/10b981/ffffff?text=Smart+Study"
+    description: "오피스25 무인 문구점에 입/퇴실 관리 키오스크와 모바일 원격제어 앱링커를 연동하여 24시간 완벽한 무인 운영 시스템을 구축했습니다.",
+    image: "/office25.webp"
   },
   {
-    client: "오늘의 밀키트",
-    industry: "무인 스토어",
-    solution: "스마트 자동판매기",
-    description: "유동인구가 많은 오피스 상권에 밀키트 스마트 자동판매기를 설치하여 24시간 추가 매출을 확보했습니다.",
-    image: "https://placehold.co/600x400/f97316/ffffff?text=Today's+Meal"
-  },
-  {
-    client: "행복마트",
-    industry: "중소형 마트",
+    client: "와이케이",
+    industry: "대형 매장",
     solution: "유통 전문 POS",
-    description: "복잡했던 상품 재고와 회원 관리를 유통 전문 POS로 교체하며 업무 효율을 2배 이상 높였습니다.",
-    image: "https://placehold.co/600x400/8b5cf6/ffffff?text=Happy+Mart"
+    description: "와이케이 매장에 포스기를 대량으로 운용하고 있으며, 문제없이 안정적으로 사용 중입니다. 대용량 거래 처리와 고객 관리를 위한 전문 POS 시스템으로 운영 효율을 극대화했습니다.",
+    image: "https://placehold.co/600x400/f97316/ffffff?text=YK+Store"
+  },
+  {
+    client: "KT wiz샵",
+    industry: "야구단 굿즈샵",
+    solution: "키오스크",
+    description: "KT wiz 야구단 공식 굿즈샵에 키오스크를 여러 대 설치하여 운영 중입니다. 경기 전후 팬들의 빠른 주문과 결제를 지원하며, 야구 팬들의 쇼핑 경험을 향상시켰습니다.",
+    image: "/ktwiz.webp"
   },
 ];
 

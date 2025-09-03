@@ -6,11 +6,9 @@ const publicDir = path.join(__dirname, '../public');
 
 // 압축할 이미지 파일들
 const imageFiles = [
-  'kiosk.png',
-  'vending machine.png', 
-  'webpos.png',
-  'google-play logo.png',
-  'teligen-logo.png'
+  'office25.jpg',
+  'ggoddong.jpg',
+  'ktwiz.jpg'
 ];
 
 async function compressAndConvertToWebP() {
@@ -18,7 +16,7 @@ async function compressAndConvertToWebP() {
 
   for (const filename of imageFiles) {
     const inputPath = path.join(publicDir, filename);
-    const outputPath = path.join(publicDir, filename.replace('.png', '.webp'));
+    const outputPath = path.join(publicDir, filename.replace('.jpg', '.webp'));
     
     if (!fs.existsSync(inputPath)) {
       console.log(`❌ ${filename} 파일을 찾을 수 없습니다.`);
@@ -51,7 +49,7 @@ async function compressAndConvertToWebP() {
       
       console.log(`   압축 후: ${compressedSize} KB`);
       console.log(`   절약: ${savedSize} KB (${savedPercent}%)`);
-      console.log(`   ✅ ${filename.replace('.png', '.webp')} 생성 완료\n`);
+      console.log(`   ✅ ${filename.replace('.jpg', '.webp')} 생성 완료\n`);
 
     } catch (error) {
       console.error(`❌ ${filename} 처리 중 오류 발생:`, error.message);
