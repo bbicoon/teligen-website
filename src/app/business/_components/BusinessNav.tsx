@@ -29,7 +29,7 @@ const BusinessNav = () => {
       icon: ShoppingCart,
     },
     {
-      name: "앱링커",
+      name: "하이퍼엣지",
       href: "/business/applinker",
       icon: Smartphone,
     },

@@ -111,29 +111,29 @@ const BusinessSection = () => {
             </Link>
           </div>
 
-          {/* 네 번째 카드 - 앱링커 */}
+          {/* 네 번째 카드 - 하이퍼엣지 */}
           <div>
             <Link href="/business/applinker">
               <Card className="hover:shadow-lg transition-shadow duration-300 border-0 shadow-md cursor-pointer">
                 <CardHeader className="text-center pb-4">
                   <div className="mx-auto mb-4 w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center">
-                    {/* 앱링커 아이콘 이미지 - webp 형식 사용 */}
+                    {/* 하이퍼엣지 아이콘 이미지 - webp 형식 사용 */}
                     <Image
-                      src="/applinker-icon.webp"
-                      alt="스마트폰에서 키오스크를 원격으로 제어할 수 있는 앱링커 모바일 앱 아이콘"
+                      src="/hyperedge.webp"
+                      alt="POS/키오스크와 연동되는 다양한 서드파티 앱을 모바일에서 사용할 수 있는 하이퍼엣지 앱 아이콘"
                       width={32}
                       height={32}
                       className="w-8 h-8"
                     />
                   </div>
                   <CardTitle className="text-2xl font-bold text-slate-800">
-                    앱링커
+                    하이퍼엣지
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
                   <CardDescription className="text-lg text-slate-600 leading-relaxed">
-                    언제 어디서든 모바일 앱으로 매장 장비를 원격으로 제어하고
-                    상태를 확인할 수 있습니다.
+                    POS/키오스크와 연동되는 다양한 서드파티 앱을 모바일 환경에서
+                    사용할 수 있는 B2B 솔루션입니다.
                   </CardDescription>
                 </CardContent>
               </Card>

@@ -91,20 +91,20 @@ export default function KioskPage() {
         </div>
       </section>
 
-      {/* 앱링커 연동 */}
+      {/* 하이퍼엣지 연동 */}
       <section className="mb-8">
         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-6 text-center">
           <div className="flex items-center justify-center gap-3 mb-3">
             <Smartphone className="w-6 h-6 text-blue-600" />
             <h3 className="text-xl font-bold text-slate-800">
-              앱링커와의 완벽한 연동
+              하이퍼엣지와의 완벽한 연동
             </h3>
           </div>
           <p className="text-slate-600 mb-4">
-            스마트폰으로 언제 어디서나 원격 관리 가능
+            POS/키오스크 연동 모바일 관리 솔루션
           </p>
           <Button asChild className="bg-blue-600 hover:bg-blue-700">
-            <Link href="/business/applinker">앱링커 자세히 보기</Link>
+            <Link href="/business/applinker">하이퍼엣지 자세히 보기</Link>
           </Button>
         </div>
       </section>

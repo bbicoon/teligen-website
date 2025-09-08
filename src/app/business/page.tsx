@@ -47,18 +47,18 @@ const solutions = [
     href: "/business/pos",
   },
   {
-    name: "앱링커",
-    description: "스마트폰 원격 관리",
+    name: "하이퍼엣지",
+    description: "POS/키오스크 연동 모바일 관리",
     features: [
-      "실시간 모니터링",
-      "원격 제어",
-      "실시간 알림",
-      "모바일 대시보드",
+      "자동매핑 연결",
+      "QR등록 연결",
+      "서드파티 앱 연동",
+      "B2B 솔루션",
     ],
     image: "/placeholder-app.svg",
     href: "/business/applinker",
     downloadLink:
-      "https://play.google.com/store/apps/details?id=com.zeonix.applinker",
+      "https://play.google.com/store/apps/details?id=com.zeonix.hyperedge&pcampaignid=web_share",
   },
 ];
 
@@ -103,16 +103,16 @@ export default function SolutionsPage() {
                       height={375}
                       className="rounded-lg object-contain group-hover:scale-105 transition-transform duration-300"
                     />
-                  ) : solution.name === "앱링커" ? (
+                  ) : solution.name === "하이퍼엣지" ? (
                     <div className="flex flex-col items-center">
                       <Image
-                        src="/applinker-icon.webp"
-                        alt="스마트폰에서 키오스크를 원격으로 제어할 수 있는 앱링커 모바일 앱 아이콘"
+                        src="/hyperedge.webp"
+                        alt="POS/키오스크와 연동되는 다양한 서드파티 앱을 모바일에서 사용할 수 있는 하이퍼엣지 앱 아이콘"
                         width={150}
                         height={150}
                         className="rounded-lg mb-4 group-hover:scale-105 transition-transform duration-300"
                       />
-                      <p className="text-gray-600 font-medium text-lg">앱링커</p>
+                      <p className="text-gray-600 font-medium text-lg">하이퍼엣지</p>
                     </div>
                   ) : (
                     <Image
@@ -157,21 +157,21 @@ export default function SolutionsPage() {
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-lg p-8 border border-orange-200">
             <h3 className="text-2xl font-bold text-slate-800 mb-4">
-              앱링커 다운로드
+              하이퍼엣지 다운로드
             </h3>
             <p className="text-slate-600 mb-6">
-              지금 바로 Google Play Store에서 앱링커를 다운로드하고 스마트한
+              지금 바로 Google Play Store에서 하이퍼엣지를 다운로드하고 스마트한
               매장 관리를 시작하세요.
             </p>
             <a
-              href="https://play.google.com/store/apps/details?id=com.zeonix.applinker"
+              href="https://play.google.com/store/apps/details?id=com.zeonix.hyperedge&pcampaignid=web_share"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block"
             >
               <Image
                 src="/google-play logo.webp"
-                alt="Google Play Store에서 앱링커 앱을 다운로드할 수 있는 공식 스토어 로고"
+                alt="Google Play Store에서 하이퍼엣지 앱을 다운로드할 수 있는 공식 스토어 로고"
                 width={180}
                 height={54}
                 className="h-14 w-auto hover:opacity-80 transition-opacity mx-auto"
