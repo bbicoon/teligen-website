@@ -1,9 +1,27 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, RedirectResponse
 import os
 
 app = FastAPI()
+
+# 리다이렉트 미들웨어: teligen.co.kr -> www.teligen.co.kr
+@app.middleware("http")
+async def redirect_middleware(request: Request, call_next):
+    # Host 헤더에서 도메인 확인
+    host = request.headers.get("host", "")
+    
+    # teligen.co.kr로 접속한 경우 www.teligen.co.kr로 리다이렉트
+    if host == "teligen.co.kr":
+        # 현재 경로와 쿼리 파라미터를 유지하면서 리다이렉트
+        url = f"https://www.teligen.co.kr{request.url.path}"
+        if request.url.query:
+            url += f"?{request.url.query}"
+        return RedirectResponse(url=url, status_code=301)
+    
+    # 다른 요청은 정상 처리
+    response = await call_next(request)
+    return response
 
 # AI 모델 API 엔드포인트
 @app.get("/api/ai")

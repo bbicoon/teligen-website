@@ -8,17 +8,17 @@ const Footer = () => {
     {
       title: "솔루션",
       links: [
-        { name: "키오스크", href: "/business" },
-        { name: "자동판매기", href: "/business" },
-        { name: "유통포스 프로그램", href: "/business" },
-        { name: "앱링커", href: "/business" },
+        { name: "키오스크", href: "/business/kiosk" },
+        { name: "자동판매기", href: "/business/vending" },
+        { name: "유통포스 프로그램", href: "/business/pos" },
+        { name: "앱링커", href: "/business/applinker" },
       ],
     },
     {
       title: "회사",
       links: [
-        { name: "회사소개", href: "/about" },
         { name: "미디어", href: "/media" },
+        { name: "블로그", href: "https://blog.naver.com/teligen", external: true },
       ],
     },
   ];
@@ -72,6 +72,8 @@ const Footer = () => {
                     <Link
                       href={link.href}
                       className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
+                      target={link.external ? "_blank" : undefined}
+                      rel={link.external ? "noopener noreferrer" : undefined}
                     >
                       {link.name}
                     </Link>

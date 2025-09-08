@@ -10,6 +10,7 @@ import { Menu, X } from "lucide-react";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isBusinessDropdownOpen, setIsBusinessDropdownOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -22,10 +23,15 @@ const Header = () => {
   }, []);
 
   const menuItems = [
-    { name: "사업 분야", href: "/business" },
     { name: "구축사례", href: "/portfolio" },
     { name: "미디어", href: "/media" },
-    { name: "회사소개", href: "/about" },
+  ];
+
+  const businessItems = [
+    { name: "키오스크", href: "/business/kiosk" },
+    { name: "자동판매기", href: "/business/vending" },
+    { name: "유통포스 프로그램", href: "/business/pos" },
+    { name: "앱링커", href: "/business/applinker" },
   ];
 
   return (
@@ -53,6 +59,48 @@ const Header = () => {
 
           {/* 데스크톱 메뉴 */}
           <nav className="hidden md:flex items-center space-x-8">
+            {/* 사업 분야 드롭다운 */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setIsBusinessDropdownOpen(true)}
+              onMouseLeave={() => setIsBusinessDropdownOpen(false)}
+            >
+              <Link
+                href="/business"
+                className={`${
+                  pathname.startsWith('/business')
+                    ? "text-blue-600"
+                    : "text-gray-700"
+                } hover:text-gray-900 transition-colors duration-200 font-medium`}
+              >
+                사업 분야
+              </Link>
+              
+              {/* 드롭다운 메뉴 */}
+              {isBusinessDropdownOpen && (
+                <div 
+                  className="absolute top-full left-0 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
+                  onMouseEnter={() => setIsBusinessDropdownOpen(true)}
+                  onMouseLeave={() => setIsBusinessDropdownOpen(false)}
+                >
+                  {businessItems.map((item) => (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className={`block px-4 py-2 text-sm ${
+                        pathname === item.href
+                          ? "text-blue-600 bg-blue-50"
+                          : "text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+                      } transition-colors duration-200`}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* 일반 메뉴 아이템들 */}
             {menuItems.map((item) => (
               <Link
                 key={item.name}
@@ -96,6 +144,38 @@ const Header = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-md rounded-lg mt-2 shadow-lg">
+              {/* 사업 분야 */}
+              <div>
+                <Link
+                  href="/business"
+                  className={`block px-3 py-2 ${
+                    pathname.startsWith('/business')
+                      ? "text-blue-600 bg-blue-50"
+                      : "text-gray-700"
+                  } hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200 font-medium`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  사업 분야
+                </Link>
+                <div className="ml-4 mt-1 space-y-1">
+                  {businessItems.map((item) => (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className={`block px-3 py-2 text-sm ${
+                        pathname === item.href
+                          ? "text-blue-600 bg-blue-50"
+                          : "text-gray-600"
+                      } hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200`}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* 일반 메뉴 아이템들 */}
               {menuItems.map((item) => (
                 <Link
                   key={item.name}
