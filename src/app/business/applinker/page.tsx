@@ -196,7 +196,7 @@ export default function ApplinkerPage() {
             <CardHeader className="text-center">
               <div className="flex items-center justify-center gap-4 mb-4">
                 <Image 
-                  src="/google-play-logo.webp" 
+                  src="/google-play logo.webp" 
                   alt="Google Play Store" 
                   width={40} 
                   height={40}
