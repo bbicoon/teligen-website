@@ -115,7 +115,7 @@ const BusinessSection = () => {
                     {/* 앱링커 아이콘 이미지 - webp 형식 사용 */}
                     <Image 
                       src="/applinker-icon.webp" 
-                      alt="앱링커 아이콘" 
+                      alt="스마트폰에서 키오스크를 원격으로 제어할 수 있는 앱링커 모바일 앱 아이콘" 
                       width={32} 
                       height={32}
                       className="w-8 h-8"

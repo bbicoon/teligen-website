@@ -49,7 +49,7 @@ const Header = () => {
             <Link href="/" className="flex items-center">
               <Image
                 src="/teligen-logo.webp"
-                alt="TELIGEN Logo"
+                alt="텔리젠 공식 로고 - 매장 자동화 솔루션 전문 기업"
                 width={120}
                 height={40}
                 priority

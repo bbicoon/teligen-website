@@ -18,7 +18,7 @@ export default function ApplinkerPage() {
             <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center">
               <Image 
                 src="/applinker-icon.webp" 
-                alt="앱링커 아이콘" 
+                alt="스마트폰에서 키오스크를 원격으로 제어할 수 있는 앱링커 모바일 앱 아이콘" 
                 width={32} 
                 height={32}
                 className="w-8 h-8"
@@ -196,7 +196,7 @@ export default function ApplinkerPage() {
               <div className="flex items-center justify-center gap-4 mb-4">
                 <Image 
                   src="/google-play logo.webp" 
-                  alt="Google Play Store" 
+                  alt="Google Play Store에서 앱링커 앱을 다운로드할 수 있는 공식 스토어 로고" 
                   width={40} 
                   height={40}
                 />

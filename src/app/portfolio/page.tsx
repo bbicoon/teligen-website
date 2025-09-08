@@ -56,7 +56,13 @@ export default function PortfolioPage() {
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {portfolioItems.map((item) => (
             <Card key={item.client} className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <Image src={item.image} alt={`${item.client} 구축사례 이미지`} width={600} height={400} className="w-full h-64 object-cover" />
+              <Image 
+                src={item.image} 
+                alt={`${item.client} 매장에 설치된 텔리젠 ${item.solution} 시스템의 실제 구축 사례`} 
+                width={600} 
+                height={400} 
+                className="w-full h-64 object-cover" 
+              />
               <CardHeader>
                 <CardTitle className="text-2xl">
                   {item.link ? (

@@ -78,7 +78,7 @@ export default function SolutionsPage() {
                   {solution.name === "키오스크" ? (
                     <Image 
                       src="/kiosk.webp"
-                      alt="키오스크 이미지"
+                      alt="다양한 업종에 설치된 흰색 텔리젠 키오스크 주문 시스템"
                       width={320}
                       height={240}
                       className="rounded-md object-contain"
@@ -86,7 +86,7 @@ export default function SolutionsPage() {
                   ) : solution.name === "자동판매기" ? (
                     <Image 
                       src="/vending machine.webp"
-                      alt="자동판매기 이미지"
+                      alt="현대적인 스마트 자동판매기로 음료와 간식을 판매하는 무인 판매 시스템"
                       width={320}
                       height={240}
                       className="rounded-md object-contain"
@@ -94,7 +94,7 @@ export default function SolutionsPage() {
                   ) : solution.name === "유통포스 프로그램" ? (
                     <Image 
                       src="/webpos.webp"
-                      alt="유통포스 프로그램 이미지"
+                      alt="유통업에 특화된 전문 POS 프로그램 화면으로 재고 관리와 매출 분석을 제공하는 시스템"
                       width={448}
                       height={336}
                       className="rounded-md object-contain"
@@ -103,7 +103,7 @@ export default function SolutionsPage() {
                     <div className="flex flex-col items-center">
                       <Image 
                         src="/applinker-icon.webp"
-                        alt="앱링커 아이콘"
+                        alt="스마트폰에서 키오스크를 원격으로 제어할 수 있는 앱링커 모바일 앱 아이콘"
                         width={120}
                         height={120}
                         className="rounded-lg mb-4"
@@ -134,7 +134,7 @@ export default function SolutionsPage() {
             >
               <Image 
                 src="/google-play logo.webp"
-                alt="Google Play Store에서 다운로드"
+                alt="Google Play Store에서 앱링커 앱을 다운로드할 수 있는 공식 스토어 로고"
                 width={180}
                 height={54}
                 className="h-14 w-auto hover:opacity-80 transition-opacity mx-auto"

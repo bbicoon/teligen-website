@@ -34,7 +34,7 @@ const Footer = () => {
               <Link href="/">
                 <Image
                   src="/teligen-logo.webp"
-                  alt="TELIGEN 로고"
+                  alt="텔리젠 공식 로고 - 매장 자동화 솔루션 전문 기업"
                   width={120}
                   height={30}
                   className="mb-4"
