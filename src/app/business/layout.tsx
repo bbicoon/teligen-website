@@ -10,12 +10,16 @@ export default function BusinessLayout({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="flex gap-8">
           {/* 왼쪽 사이드바 - BusinessNav */}
-          <aside className="hidden lg:block">
+          <aside className="hidden lg:block flex-shrink-0">
             <BusinessNav />
           </aside>
 
-          {/* 오른쪽 메인 콘텐츠 */}
-          <main className="flex-1">{children}</main>
+          {/* 메인 콘텐츠 */}
+          <main className="flex-1 min-w-0">
+            <div className="max-w-4xl mx-auto">
+              {children}
+            </div>
+          </main>
         </div>
       </div>
     </div>

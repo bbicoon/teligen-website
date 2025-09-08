@@ -36,7 +36,7 @@ const BusinessNav = () => {
   ];
 
   return (
-    <nav className="w-64 bg-white rounded-lg shadow-lg p-6 h-fit sticky top-24">
+    <nav className="w-56 bg-white rounded-lg shadow-lg p-4 h-fit sticky top-24">
       <h2 className="text-xl font-bold text-slate-800 mb-6">사업 분야</h2>
       <ul className="space-y-2">
         {businessItems.map((item) => {
