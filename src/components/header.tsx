@@ -46,12 +46,12 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* 로고 */}
           <div className="flex-shrink-0">
-            <Link href="/">
+            <Link href="/" className="flex items-center">
               <Image
                 src="/teligen-logo.webp"
-                alt="TELIGEN 로고"
+                alt="TELIGEN Logo"
                 width={120}
-                height={30}
+                height={40}
                 priority
               />
             </Link>
