@@ -2,7 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { MonitorSmartphone, Package, ShoppingCart, Smartphone } from "lucide-react";
+import {
+  MonitorSmartphone,
+  Package,
+  ShoppingCart,
+  Smartphone,
+} from "lucide-react";
 
 const BusinessNav = () => {
   const pathname = usePathname();
@@ -37,7 +42,7 @@ const BusinessNav = () => {
         {businessItems.map((item) => {
           const Icon = item.icon;
           const isActive = pathname === item.href;
-          
+
           return (
             <li key={item.name}>
               <Link

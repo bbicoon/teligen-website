@@ -13,11 +13,9 @@ export default function BusinessLayout({
           <aside className="hidden lg:block">
             <BusinessNav />
           </aside>
-          
+
           {/* 오른쪽 메인 콘텐츠 */}
-          <main className="flex-1">
-            {children}
-          </main>
+          <main className="flex-1">{children}</main>
         </div>
       </div>
     </div>

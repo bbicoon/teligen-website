@@ -37,9 +37,7 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/90 backdrop-blur-md shadow-lg"
-          : "bg-transparent"
+        isScrolled ? "bg-white/90 backdrop-blur-md shadow-lg" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,7 +58,7 @@ const Header = () => {
           {/* 데스크톱 메뉴 */}
           <nav className="hidden md:flex items-center space-x-8">
             {/* 사업 분야 드롭다운 */}
-            <div 
+            <div
               className="relative"
               onMouseEnter={() => setIsBusinessDropdownOpen(true)}
               onMouseLeave={() => setIsBusinessDropdownOpen(false)}
@@ -68,17 +66,17 @@ const Header = () => {
               <Link
                 href="/business"
                 className={`${
-                  pathname.startsWith('/business')
+                  pathname.startsWith("/business")
                     ? "text-blue-600"
                     : "text-gray-700"
                 } hover:text-gray-900 transition-colors duration-200 font-medium`}
               >
                 사업 분야
               </Link>
-              
+
               {/* 드롭다운 메뉴 */}
               {isBusinessDropdownOpen && (
-                <div 
+                <div
                   className="absolute top-full left-0 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
                   onMouseEnter={() => setIsBusinessDropdownOpen(true)}
                   onMouseLeave={() => setIsBusinessDropdownOpen(false)}
@@ -106,9 +104,7 @@ const Header = () => {
                 key={item.name}
                 href={item.href}
                 className={`${
-                  pathname === item.href
-                    ? "text-blue-600"
-                    : "text-gray-700"
+                  pathname === item.href ? "text-blue-600" : "text-gray-700"
                 } hover:text-gray-900 transition-colors duration-200 font-medium`}
               >
                 {item.name}
@@ -118,7 +114,10 @@ const Header = () => {
 
           {/* 데스크톱 LOGIN 버튼 */}
           <div className="hidden md:block">
-            <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white">
+            <Button
+              asChild
+              className="bg-blue-600 hover:bg-blue-700 text-white"
+            >
               <Link href="https://service.teligen.co.kr" target="_blank">
                 LOGIN
               </Link>
@@ -149,7 +148,7 @@ const Header = () => {
                 <Link
                   href="/business"
                   className={`block px-3 py-2 ${
-                    pathname.startsWith('/business')
+                    pathname.startsWith("/business")
                       ? "text-blue-600 bg-blue-50"
                       : "text-gray-700"
                   } hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200 font-medium`}
@@ -191,7 +190,10 @@ const Header = () => {
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                <Button
+                  asChild
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                >
                   <Link href="https://service.teligen.co.kr" target="_blank">
                     LOGIN
                   </Link>

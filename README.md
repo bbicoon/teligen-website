@@ -48,12 +48,14 @@ src/
 ## 🛠️ 설치 및 실행
 
 ### 1. 저장소 클론
+
 ```bash
 git clone [your-repository-url]
 cd teligen-website
 ```
 
 ### 2. 의존성 설치
+
 ```bash
 # Node.js 의존성 설치
 npm install
@@ -63,6 +65,7 @@ pip install -r requirements.txt
 ```
 
 ### 3. 개발 서버 실행
+
 ```bash
 # Next.js 개발 서버
 npm run dev
@@ -87,16 +90,19 @@ python main.py
 ## 📦 빌드 및 배포
 
 ### 정적 사이트 빌드
+
 ```bash
 npm run build
 ```
 
 ### FastAPI 서버 실행
+
 ```bash
 python main.py
 ```
 
 ### 이미지 압축 (선택사항)
+
 ```bash
 node scripts/compress-images.js
 ```
@@ -111,11 +117,13 @@ node scripts/compress-images.js
 ## 🔧 환경 설정
 
 ### Next.js 설정
+
 - **Static Export**: `output: 'export'` 설정으로 정적 사이트 생성
 - **이미지 최적화**: `images: { unoptimized: true }` 설정으로 정적 내보내기 호환
 - **소스맵**: 프로덕션에서 비활성화하여 용량 최적화
 
 ### FastAPI 설정
+
 - **정적 파일 서빙**: `out` 폴더의 Next.js 빌드 결과물 서빙
 - **도메인 리다이렉트**: teligen.co.kr → www.teligen.co.kr 자동 리다이렉트
 - **404 처리**: SPA 라우팅을 위한 index.html 반환

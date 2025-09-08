@@ -18,7 +18,11 @@ const Footer = () => {
       title: "회사",
       links: [
         { name: "미디어", href: "/media" },
-        { name: "블로그", href: "https://blog.naver.com/teligen", external: true },
+        {
+          name: "블로그",
+          href: "https://blog.naver.com/teligen",
+          external: true,
+        },
       ],
     },
   ];
@@ -43,14 +47,14 @@ const Footer = () => {
               <p className="text-gray-300 leading-relaxed mb-4">
                 매장 자동화의 모든 것
               </p>
-              
+
               {/* 회사 주소 */}
               <div className="mb-4">
                 <p className="text-gray-300 text-sm leading-relaxed">
                   서울특별시 금천구 가산디지털1로 196, 305호
                 </p>
               </div>
-              
+
               {/* 연락처 */}
               <div className="mb-4">
                 <p className="text-gray-300 text-sm">
