@@ -18,9 +18,9 @@ export const metadata: Metadata = {
   description:
     "키오스크, 자동판매기, 유통포스, 앱링커 등 매장 자동화에 필요한 모든 솔루션을 제공합니다.",
   icons: {
-    icon: "/teligen-logo.webp",
-    shortcut: "/teligen-logo.webp",
-    apple: "/teligen-logo.webp",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
 };
 

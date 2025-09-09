@@ -32,7 +32,12 @@ async def run_ai_model():
 # 먼저 / 경로에 대해 StaticFiles를 마운트합니다.
 app.mount("/", StaticFiles(directory="out", html = True), name="static")
 
-# 루트 경로 또는 존재하지 않는 경로 요청 시 index.html을 반환하도록 설정
+# 404 핸들러: API와 웹페이지 요청을 구분하여 처리
 @app.exception_handler(404)
-async def not_found(request, exc):
+async def not_found(request: Request, exc):
+    # API 요청인 경우 404 JSON 응답 반환
+    if request.url.path.startswith('/api'):
+        return {"error": "API endpoint not found", "status": 404}
+    
+    # 웹페이지 요청인 경우 SPA 라우팅을 위해 index.html 반환
     return FileResponse(os.path.join("out", "index.html"))

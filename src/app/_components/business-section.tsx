@@ -8,30 +8,8 @@ import {
 import { MonitorSmartphone, Package, ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-// import { motion } from "framer-motion";
 
 const BusinessSection = () => {
-  // const containerVariants = {
-  //   hidden: { opacity: 0 },
-  //   visible: {
-  //     opacity: 1,
-  //     transition: {
-  //       staggerChildren: 0.2
-  //     }
-  //   }
-  // };
-
-  // const cardVariants = {
-  //   hidden: { opacity: 0, y: 50 },
-  //   visible: {
-  //     opacity: 1,
-  //     y: 0,
-  //     transition: {
-  //       duration: 0.5,
-  //       ease: "easeOut"
-  //     }
-  //   }
-  // };
 
   return (
     <section className="py-20 bg-gradient-to-b from-slate-100 to-blue-100">

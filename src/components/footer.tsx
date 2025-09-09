@@ -6,7 +6,7 @@ const Footer = () => {
 
   const footerSections = [
     {
-      title: "솔루션",
+      title: "사업 분야",
       links: [
         { name: "키오스크", href: "/business/kiosk" },
         { name: "자동판매기", href: "/business/vending" },
