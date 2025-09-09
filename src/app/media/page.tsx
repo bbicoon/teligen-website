@@ -133,6 +133,41 @@ export default function MediaPage() {
                 </Button>
               </CardContent>
             </Card>
+
+            <Card className="hover:shadow-lg transition-shadow duration-300">
+              <CardHeader>
+                <div className="flex items-center gap-4 mb-2">
+                  <Badge className="bg-orange-100 text-orange-800">
+                    구내식당 키오스크
+                  </Badge>
+                </div>
+                <CardTitle className="text-2xl">
+                  구내식당키오스크 간편한 설치와 관리를 원한다면
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-base mb-4">
+                  물가 상승으로 구내식당 이용률이 높아지면서 혼잡과 혼란을 해결하기 위해 
+                  구내식당키오스크 도입이 증가하고 있습니다. 키위오더는 21.5인치 i-20R, 
+                  PSD 125부터 15.6인치 i-20R STAND, i-10P, i-10D까지 다양한 크기와 
+                  형태의 키오스크를 제공합니다. 스탠드형부터 데스크형, 벽걸이형까지 
+                  공간에 맞는 최적의 솔루션을 선택할 수 있습니다.
+                </CardDescription>
+                <Button
+                  asChild
+                  variant="link"
+                  className="p-0 text-blue-600 hover:text-blue-800"
+                >
+                  <a
+                    href="https://blog.naver.com/teligen/223623870679"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    자세히 보기 →
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </section>
 

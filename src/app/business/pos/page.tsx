@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Badge } from "@/components/ui/badge";
 import {
   ShoppingCart,
   BarChart3,
@@ -93,7 +92,7 @@ export default function PosPage() {
         <h2 className="text-2xl font-bold text-slate-800 mb-6 text-center">
           적용 업종
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
             "편의점",
             "마트",
@@ -104,13 +103,12 @@ export default function PosPage() {
             "전자제품",
             "기타 유통업",
           ].map((industry) => (
-            <Badge
+            <div
               key={industry}
-              variant="secondary"
-              className="text-center py-2 text-sm"
+              className="bg-white rounded-lg p-4 text-center shadow-sm border"
             >
-              {industry}
-            </Badge>
+              <h3 className="font-semibold text-slate-800">{industry}</h3>
+            </div>
           ))}
         </div>
       </section>

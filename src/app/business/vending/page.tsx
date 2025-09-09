@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Badge } from "@/components/ui/badge";
 import { Package, Clock, DollarSign, Thermometer } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -60,7 +59,7 @@ export default function VendingPage() {
         <h2 className="text-2xl font-bold text-slate-800 mb-6 text-center">
           판매 상품
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
             "음료",
             "간식",
@@ -71,13 +70,12 @@ export default function VendingPage() {
             "의료용품",
             "기타 상품",
           ].map((product) => (
-            <Badge
+            <div
               key={product}
-              variant="secondary"
-              className="text-center py-2 text-sm"
+              className="bg-white rounded-lg p-4 text-center shadow-sm border"
             >
-              {product}
-            </Badge>
+              <h3 className="font-semibold text-slate-800">{product}</h3>
+            </div>
           ))}
         </div>
       </section>

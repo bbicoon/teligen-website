@@ -64,8 +64,8 @@ const solutions = [
 
 export default function SolutionsPage() {
   return (
-    <main className="pt-24 min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <main className="pt-16 min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">사업 분야</h1>
           <p className="text-lg text-gray-600">
@@ -91,16 +91,16 @@ export default function SolutionsPage() {
                     <Image
                       src="/vending machine.webp"
                       alt="현대적인 스마트 자동판매기로 음료와 간식을 판매하는 무인 판매 시스템"
-                      width={400}
-                      height={300}
+                      width={340}
+                      height={255}
                       className="rounded-lg object-contain group-hover:scale-105 transition-transform duration-300"
                     />
                   ) : solution.name === "유통포스 프로그램" ? (
                     <Image
                       src="/webpos.webp"
                       alt="유통업에 특화된 전문 POS 프로그램 화면으로 재고 관리와 매출 분석을 제공하는 시스템"
-                      width={500}
-                      height={375}
+                      width={400}
+                      height={300}
                       className="rounded-lg object-contain group-hover:scale-105 transition-transform duration-300"
                     />
                   ) : solution.name === "하이퍼엣지" ? (
