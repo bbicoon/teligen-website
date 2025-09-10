@@ -30,7 +30,7 @@ const BusinessNav = () => {
     },
     {
       name: "하이퍼엣지",
-      href: "/business/applinker",
+      href: "/business/hyperedge",
       icon: Smartphone,
     },
   ];

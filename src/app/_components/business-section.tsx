@@ -91,7 +91,7 @@ const BusinessSection = () => {
 
           {/* 네 번째 카드 - 하이퍼엣지 */}
           <div>
-            <Link href="/business/applinker">
+            <Link href="/business/hyperedge">
               <Card className="hover:shadow-lg transition-shadow duration-300 border-0 shadow-md cursor-pointer">
                 <CardHeader className="text-center pb-4">
                   <div className="mx-auto mb-4 w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center">

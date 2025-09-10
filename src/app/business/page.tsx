@@ -56,7 +56,7 @@ const solutions = [
       "B2B 솔루션",
     ],
     image: "/placeholder-app.svg",
-    href: "/business/applinker",
+    href: "/business/hyperedge",
     downloadLink:
       "https://play.google.com/store/apps/details?id=com.zeonix.hyperedge&pcampaignid=web_share",
   },

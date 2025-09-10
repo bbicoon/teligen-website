@@ -27,7 +27,7 @@ src/
 │   │   ├── kiosk/
 │   │   ├── vending/
 │   │   ├── pos/
-│   │   └── applinker/
+│   │   └── hyperedge/
 │   ├── portfolio/            # 구축 사례
 │   ├── media/               # 뉴스 및 미디어
 │   ├── globals.css

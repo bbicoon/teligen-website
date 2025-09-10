@@ -102,7 +102,7 @@ export default function KioskPage() {
             POS/키오스크 연동 모바일 관리 솔루션
           </p>
           <Button asChild className="bg-blue-600 hover:bg-blue-700">
-            <Link href="/business/applinker">하이퍼엣지 자세히 보기</Link>
+            <Link href="/business/hyperedge">하이퍼엣지 자세히 보기</Link>
           </Button>
         </div>
       </section>

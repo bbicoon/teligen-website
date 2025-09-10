@@ -31,7 +31,7 @@ const Header = () => {
     { name: "키오스크", href: "/business/kiosk" },
     { name: "자동판매기", href: "/business/vending" },
     { name: "유통포스 프로그램", href: "/business/pos" },
-    { name: "하이퍼엣지", href: "/business/applinker" },
+    { name: "하이퍼엣지", href: "/business/hyperedge" },
   ];
 
   return (

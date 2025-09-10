@@ -1,43 +1,37 @@
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse, RedirectResponse
+from fastapi.responses import FileResponse
 import os
 
 app = FastAPI()
 
-# 리다이렉트 미들웨어: teligen.co.kr -> www.teligen.co.kr
-@app.middleware("http")
-async def redirect_middleware(request: Request, call_next):
-    # Host 헤더에서 도메인 확인
-    host = request.headers.get("host", "")
-    
-    # teligen.co.kr로 접속한 경우 www.teligen.co.kr로 리다이렉트
-    if host == "teligen.co.kr":
-        # 현재 경로와 쿼리 파라미터를 유지하면서 리다이렉트
-        url = f"https://www.teligen.co.kr{request.url.path}"
-        if request.url.query:
-            url += f"?{request.url.query}"
-        return RedirectResponse(url=url, status_code=301)
-    
-    # 다른 요청은 정상 처리
-    response = await call_next(request)
-    return response
-
-# AI 모델 API 엔드포인트
+# API 엔드포인트는 그대로 둡니다.
 @app.get("/api/ai")
 async def run_ai_model():
-    return {"message": "서버 테스트 성공!"}
+    return {"message": "안녕하세요! 텔리젠 AI가 응답합니다."}
 
-# Next.js 정적 파일 서빙 (수정된 부분)
-# 먼저 / 경로에 대해 StaticFiles를 마운트합니다.
-app.mount("/", StaticFiles(directory="out", html = True), name="static")
+# _next 폴더는 정적 자산으로 직접 마운트합니다.
+app.mount("/_next", StaticFiles(directory="out/_next"), name="next-assets")
 
-# 404 핸들러: API와 웹페이지 요청을 구분하여 처리
-@app.exception_handler(404)
-async def not_found(request: Request, exc):
-    # API 요청인 경우 404 JSON 응답 반환
-    if request.url.path.startswith('/api'):
-        return {"error": "API endpoint not found", "status": 404}
+# 이미지 등 다른 public 파일들을 위한 마운트
+app.mount("/static", StaticFiles(directory="out"), name="static-root")
+
+# 모든 페이지 요청을 처리하는 "Catch-all" 라우트
+@app.get("/{full_path:path}")
+async def catch_all(full_path: str):
+    # 요청된 경로를 기반으로 실제 파일 경로를 만듭니다.
+    # 예: /business/kiosk -> out/business/kiosk.html
+    # 예: / -> out/index.html
+    path = full_path
+    if not full_path:
+        path = "index.html"
     
-    # 웹페이지 요청인 경우 SPA 라우팅을 위해 index.html 반환
-    return FileResponse(os.path.join("out", "index.html"))
+    # 파일 확장자가 없는 경우 .html을 붙여봅니다.
+    if "." not in os.path.basename(path):
+        path += ".html"
+    file_path = os.path.join("out", path)
+    # 해당 파일이 존재하면 보여주고, 없으면 메인 index.html을 보여줍니다.
+    if os.path.exists(file_path):
+        return FileResponse(file_path)
+    else:
+        return FileResponse(os.path.join("out", "index.html"))
