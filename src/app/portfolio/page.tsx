@@ -38,7 +38,7 @@ const portfolioItems = [
     solution: "유통 전문 POS",
     description:
       "와이케이 매장에 포스기를 대량으로 운용하고 있으며, 문제없이 안정적으로 사용 중입니다. 대용량 거래 처리와 고객 관리를 위한 전문 POS 시스템으로 운영 효율을 극대화했습니다.",
-    image: "/yk-store.webp",
+    image: "/vending machine.webp",
   },
   {
     client: "KT wiz샵",

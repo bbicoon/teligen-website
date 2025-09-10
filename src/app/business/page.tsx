@@ -6,7 +6,16 @@ import { CheckCircle, ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "사업 분야 - TELIGEN",
   description:
-    "키오스크, 자동판매기, 유통포스, 앱링커 등 텔리젠의 혁신적인 사업 분야를 소개합니다.",
+    "키오스크, 자동판매기, 유통포스, 하이퍼엣지 등 텔리젠의 혁신적인 사업 분야를 소개합니다. 24시간 무인 운영부터 스마트 결제까지 완벽한 매장 자동화 솔루션을 만나보세요.",
+  keywords: [
+    "키오스크",
+    "자동판매기",
+    "유통포스",
+    "하이퍼엣지",
+    "매장 자동화",
+    "무인 매장",
+    "POS 시스템"
+  ],
 };
 
 const solutions = [

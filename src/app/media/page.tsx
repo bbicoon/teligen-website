@@ -69,16 +69,16 @@ export default function MediaPage() {
               <CardHeader>
                 <div className="flex items-center gap-4 mb-2">
                   <Badge className="bg-green-100 text-green-800">
-                    앱링커 소식
+                    하이퍼엣지 소식
                   </Badge>
                 </div>
                 <CardTitle className="text-2xl">
-                  앱링커 키오스크 원격관리
+                  하이퍼엣지 키오스크 원격관리
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base mb-4">
-                  앱링커는 키오스크 관리에 혁신을 가져오는 스마트 솔루션입니다.
+                  하이퍼엣지는 키오스크 관리에 혁신을 가져오는 스마트 솔루션입니다.
                   스마트폰 하나로 어디서든 키오스크를 원격으로 제어할 수 있으며,
                   원격 연결, 실시간 알림, 스케줄러 등 다양한 기능으로 매장 운영
                   효율성을 극대화합니다.
