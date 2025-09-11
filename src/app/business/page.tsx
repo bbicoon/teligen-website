@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle, ArrowRight } from "lucide-react";
+import PageHeader from "@/components/PageHeader";
 
 export const metadata: Metadata = {
   title: "사업 분야 - TELIGEN",
@@ -73,14 +74,12 @@ const solutions = [
 
 export default function SolutionsPage() {
   return (
-    <main className="pt-16 min-h-screen bg-white">
+    <main className="min-h-screen bg-white">
+      <PageHeader 
+        title="사업 분야" 
+        description="텔리젠은 매장 자동화에 필요한 모든 사업 영역을 포괄합니다."
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">사업 분야</h1>
-          <p className="text-lg text-gray-600">
-            텔리젠은 매장 자동화에 필요한 모든 사업 영역을 포괄합니다.
-          </p>
-        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {solutions.map((solution) => (

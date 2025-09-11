@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import {
-  MonitorSmartphone,
   Clock,
   Shield,
   Users,
   Smartphone,
 } from "lucide-react";
 import Link from "next/link";
+import PageHeader from "@/components/PageHeader";
 
 export const metadata: Metadata = {
   title: "키오스크 - TELIGEN",
@@ -18,18 +18,10 @@ export const metadata: Metadata = {
 export default function KioskPage() {
   return (
     <div>
-      {/* 헤더 섹션 */}
-      <div className="text-center mb-12">
-        <div className="inline-flex items-center gap-3 mb-4">
-          <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-            <MonitorSmartphone className="w-6 h-6 text-blue-600" />
-          </div>
-          <h1 className="text-3xl font-bold text-slate-800">키오스크</h1>
-        </div>
-        <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-          24시간 무인 주문 및 결제 시스템
-        </p>
-      </div>
+      <PageHeader 
+        title="키오스크" 
+        description="24시간 무인 주문 및 결제 시스템"
+      />
 
       {/* 주요 특징 */}
       <section className="mb-12">

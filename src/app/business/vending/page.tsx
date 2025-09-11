@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Package, Clock, DollarSign, Thermometer } from "lucide-react";
+import { Clock, DollarSign, Thermometer } from "lucide-react";
+import PageHeader from "@/components/PageHeader";
 
 export const metadata: Metadata = {
   title: "자동판매기 - TELIGEN",
@@ -9,18 +10,10 @@ export const metadata: Metadata = {
 export default function VendingPage() {
   return (
     <div>
-      {/* 헤더 섹션 */}
-      <div className="text-center mb-12">
-        <div className="inline-flex items-center gap-3 mb-4">
-          <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-            <Package className="w-6 h-6 text-green-600" />
-          </div>
-          <h1 className="text-3xl font-bold text-slate-800">자동판매기</h1>
-        </div>
-        <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-          스마트 무인 판매 시스템
-        </p>
-      </div>
+      <PageHeader 
+        title="자동판매기" 
+        description="스마트 무인 판매 시스템"
+      />
 
       {/* 주요 특징 */}
       <section className="mb-12">

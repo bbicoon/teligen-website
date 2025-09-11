@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Card,
   CardContent,
@@ -8,6 +10,7 @@ import {
 import { MonitorSmartphone, Package, ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const BusinessSection = () => {
 
@@ -24,9 +27,14 @@ const BusinessSection = () => {
         {/* 솔루션 카드들 */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* 첫 번째 카드 - 키오스크 */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
             <Link href="/business/kiosk">
-              <Card className="hover:shadow-lg transition-shadow duration-300 border-0 shadow-md cursor-pointer">
+              <Card className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-0 shadow-md cursor-pointer">
                 <CardHeader className="text-center pb-4">
                   <div className="mx-auto mb-4 w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
                     <MonitorSmartphone className="w-8 h-8 text-blue-600" />
@@ -43,12 +51,17 @@ const BusinessSection = () => {
                 </CardContent>
               </Card>
             </Link>
-          </div>
+          </motion.div>
 
           {/* 두 번째 카드 - 자동판매기 */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             <Link href="/business/vending">
-              <Card className="hover:shadow-lg transition-shadow duration-300 border-0 shadow-md cursor-pointer">
+              <Card className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-0 shadow-md cursor-pointer">
                 <CardHeader className="text-center pb-4">
                   <div className="mx-auto mb-4 w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
                     <Package className="w-8 h-8 text-green-600" />
@@ -65,12 +78,17 @@ const BusinessSection = () => {
                 </CardContent>
               </Card>
             </Link>
-          </div>
+          </motion.div>
 
           {/* 세 번째 카드 - 유통포스 프로그램 */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
             <Link href="/business/pos">
-              <Card className="hover:shadow-lg transition-shadow duration-300 border-0 shadow-md cursor-pointer">
+              <Card className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-0 shadow-md cursor-pointer">
                 <CardHeader className="text-center pb-4">
                   <div className="mx-auto mb-4 w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center">
                     <ShoppingCart className="w-8 h-8 text-purple-600" />
@@ -87,12 +105,17 @@ const BusinessSection = () => {
                 </CardContent>
               </Card>
             </Link>
-          </div>
+          </motion.div>
 
           {/* 네 번째 카드 - 하이퍼엣지 */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
             <Link href="/business/hyperedge">
-              <Card className="hover:shadow-lg transition-shadow duration-300 border-0 shadow-md cursor-pointer">
+              <Card className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-0 shadow-md cursor-pointer">
                 <CardHeader className="text-center pb-4">
                   <div className="mx-auto mb-4 w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center">
                     {/* 하이퍼엣지 아이콘 이미지 - webp 형식 사용 */}
@@ -116,7 +139,7 @@ const BusinessSection = () => {
                 </CardContent>
               </Card>
             </Link>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

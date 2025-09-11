@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import {
-  ShoppingCart,
   BarChart3,
   Users,
   Package,
   CreditCard,
   Settings,
 } from "lucide-react";
+import PageHeader from "@/components/PageHeader";
 
 export const metadata: Metadata = {
   title: "유통포스 프로그램 - TELIGEN",
@@ -16,20 +16,10 @@ export const metadata: Metadata = {
 export default function PosPage() {
   return (
     <div>
-      {/* 헤더 섹션 */}
-      <div className="text-center mb-12">
-        <div className="inline-flex items-center gap-3 mb-4">
-          <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-            <ShoppingCart className="w-6 h-6 text-purple-600" />
-          </div>
-          <h1 className="text-3xl font-bold text-slate-800">
-            유통포스 프로그램
-          </h1>
-        </div>
-        <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-          유통업 전용 POS 시스템
-        </p>
-      </div>
+      <PageHeader 
+        title="유통포스 프로그램" 
+        description="유통업 전용 POS 시스템"
+      />
 
       {/* 주요 기능 */}
       <section className="mb-12">

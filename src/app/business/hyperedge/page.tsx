@@ -8,6 +8,7 @@ import {
   Calendar,
 } from "lucide-react";
 import Image from "next/image";
+import PageHeader from "@/components/PageHeader";
 
 export const metadata: Metadata = {
   title: "하이퍼엣지 - TELIGEN",
@@ -17,24 +18,10 @@ export const metadata: Metadata = {
 export default function ApplinkerPage() {
   return (
     <div>
-      {/* 헤더 섹션 */}
-      <div className="text-center mb-12">
-        <div className="inline-flex items-center gap-3 mb-4">
-          <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
-            <Image
-              src="/hyperedge.webp"
-              alt="POS/키오스크와 연동되는 다양한 서드파티 앱을 모바일에서 사용할 수 있는 하이퍼엣지 앱 아이콘"
-              width={32}
-              height={32}
-              className="w-8 h-8"
-            />
-          </div>
-          <h1 className="text-3xl font-bold text-slate-800">하이퍼엣지</h1>
-        </div>
-        <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-          POS/키오스크 연동 모바일 관리 솔루션
-        </p>
-      </div>
+      <PageHeader 
+        title="하이퍼엣지" 
+        description="POS/키오스크 연동 모바일 관리 솔루션"
+      />
 
       {/* 주요 기능 */}
       <section className="mb-12">

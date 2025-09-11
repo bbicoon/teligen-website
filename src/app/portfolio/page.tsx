@@ -8,6 +8,7 @@ import {
   CardDescription,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import PageHeader from "@/components/PageHeader";
 
 export const metadata: Metadata = {
   title: "구축사례 - TELIGEN",
@@ -52,21 +53,18 @@ const portfolioItems = [
 
 export default function PortfolioPage() {
   return (
-    <main className="pt-24 min-h-screen bg-white">
+    <main className="min-h-screen bg-white">
+      <PageHeader 
+        title="구축사례" 
+        description="다양한 업종에 성공적으로 도입된 텔리젠의 솔루션 구축 사례들을 소개합니다."
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">구축사례</h1>
-          <p className="text-lg text-gray-600">
-            다양한 업종에 성공적으로 도입된 텔리젠의 솔루션 구축 사례들을
-            소개합니다.
-          </p>
-        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {portfolioItems.map((item) => (
             <Card
               key={item.client}
-              className="overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
               <Image
                 src={item.image}

@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import PageHeader from "@/components/PageHeader";
 
 export const metadata: Metadata = {
   title: "미디어 - TELIGEN",
@@ -16,14 +17,12 @@ export const metadata: Metadata = {
 
 export default function MediaPage() {
   return (
-    <main className="pt-24 min-h-screen bg-white">
+    <main className="min-h-screen bg-white">
+      <PageHeader 
+        title="미디어" 
+        description="키오스크 관련 최신 뉴스와 유튜브 영상을 제공합니다."
+      />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">미디어</h1>
-          <p className="text-lg text-gray-600">
-            키오스크 관련 최신 뉴스와 유튜브 영상을 제공합니다.
-          </p>
-        </div>
 
         {/* 뉴스 섹션 */}
         <section className="mb-20">
