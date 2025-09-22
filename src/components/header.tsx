@@ -25,6 +25,7 @@ const Header = () => {
   const menuItems = [
     { name: "구축사례", href: "/portfolio" },
     { name: "미디어", href: "/media" },
+    { name: "상담문의", href: "/contact" },
   ];
 
   const businessItems = [

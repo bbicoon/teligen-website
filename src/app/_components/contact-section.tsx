@@ -6,7 +6,7 @@ const ContactSection = () => {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* 콜센터 제목 */}
+        {/* 대표번호 제목 */}
         <motion.h3 
           className="text-2xl font-semibold text-gray-900 mb-6"
           initial={{ opacity: 0, y: 30 }}
@@ -14,7 +14,7 @@ const ContactSection = () => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          콜센터
+          대표번호
         </motion.h3>
 
         {/* 전화번호 */}
@@ -26,10 +26,10 @@ const ContactSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <a 
-            href="tel:1577-2220" 
+            href="tel:1577-4012" 
             className="text-5xl font-bold text-blue-600 hover:underline transition-all duration-200"
           >
-            1577-2220
+            1577-4012
           </a>
         </motion.div>
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Clock, DollarSign, Thermometer } from "lucide-react";
+import Image from "next/image";
+import { Clock, DollarSign, Thermometer, Package } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 
 export const metadata: Metadata = {
@@ -47,6 +48,21 @@ export default function VendingPage() {
         </div>
       </section>
 
+      {/* 자동판매기 이미지 1 */}
+      <section className="mb-12">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative overflow-hidden rounded-lg shadow-lg">
+            <Image
+              src="/vending-2.webp"
+              alt="텔리젠 자동판매기 내부 - 다양한 상품 진열과 온도 조절 시스템"
+              width={600}
+              height={800}
+              className="w-full h-[600px] object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* 판매 상품 */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold text-slate-800 mb-6 text-center">
@@ -70,6 +86,21 @@ export default function VendingPage() {
               <h3 className="font-semibold text-slate-800">{product}</h3>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* 자동판매기 이미지 2 */}
+      <section className="mb-12">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative overflow-hidden rounded-lg shadow-lg">
+            <Image
+              src="/vending-1.png"
+              alt="텔리젠 자동판매기 시스템 - 현대적인 스마트 자동판매기"
+              width={600}
+              height={800}
+              className="w-full h-[600px] object-cover"
+            />
+          </div>
         </div>
       </section>
 

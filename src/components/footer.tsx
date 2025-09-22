@@ -18,6 +18,7 @@ const Footer = () => {
       title: "회사",
       links: [
         { name: "미디어", href: "/media" },
+        { name: "상담문의", href: "/contact" },
         {
           name: "블로그",
           href: "https://blog.naver.com/teligen",
@@ -58,7 +59,7 @@ const Footer = () => {
               {/* 연락처 */}
               <div className="mb-4">
                 <p className="text-gray-300 text-sm">
-                  <span className="font-medium">연락처:</span> 1577-2220
+                  <span className="font-medium">연락처:</span> 1577-4012
                 </p>
               </div>
             </div>

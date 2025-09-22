@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
   Clock,
@@ -55,6 +56,21 @@ export default function KioskPage() {
         </div>
       </section>
 
+      {/* 키오스크 이미지 1 */}
+      <section className="mb-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative overflow-hidden rounded-lg shadow-lg bg-gray-50">
+            <Image
+              src="/kiosk-1.jpg"
+              alt="텔리젠 키오스크 시스템 - 매장에서 사용 중인 메인 키오스크"
+              width={600}
+              height={800}
+              className="w-full h-[500px] object-contain"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* 적용 업종 */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold text-slate-800 mb-6 text-center">
@@ -81,6 +97,21 @@ export default function KioskPage() {
         </div>
       </section>
 
+      {/* 키오스크 이미지 2 */}
+      <section className="mb-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative overflow-hidden rounded-lg shadow-lg">
+            <Image
+              src="/kiosk-3.jpg"
+              alt="텔리젠 키오스크 설치 현장 - 다양한 매장 환경에 최적화"
+              width={800}
+              height={500}
+              className="w-full h-96 object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* 하이퍼엣지 연동 */}
       <section className="mb-8">
         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-6 text-center">
@@ -96,6 +127,21 @@ export default function KioskPage() {
           <Button asChild className="bg-blue-600 hover:bg-blue-700">
             <Link href="/business/hyperedge">하이퍼엣지 자세히 보기</Link>
           </Button>
+        </div>
+      </section>
+
+      {/* 키오스크 이미지 3 */}
+      <section className="mb-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative overflow-hidden rounded-lg shadow-lg">
+            <Image
+              src="/kiosk-2.png"
+              alt="텔리젠 키오스크 UI 화면 - 직관적인 터치 인터페이스"
+              width={800}
+              height={500}
+              className="w-full h-96 object-cover"
+            />
+          </div>
         </div>
       </section>
     </div>

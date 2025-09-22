@@ -55,9 +55,12 @@ export const metadata: Metadata = {
     description: "키오스크, 자동판매기, 유통포스, 하이퍼엣지 등 매장 자동화에 필요한 모든 솔루션을 제공합니다.",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/teligen-logo.webp", sizes: "32x32", type: "image/webp" },
+    ],
     shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
+    apple: "/teligen-logo.webp",
   },
 };
 

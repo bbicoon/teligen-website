@@ -5,6 +5,7 @@ import {
   Package,
   CreditCard,
   Settings,
+  Monitor,
 } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 
@@ -20,6 +21,55 @@ export default function PosPage() {
         title="유통포스 프로그램" 
         description="유통업 전용 POS 시스템"
       />
+
+      {/* 메인 이미지 섹션 */}
+      <section className="py-12 bg-orange-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div className="space-y-6">
+              <h2 className="text-3xl font-bold text-slate-800">
+                전문 유통포스 시스템
+              </h2>
+              <p className="text-lg text-slate-600 leading-relaxed">
+                유통업에 특화된 텔리젠 POS 시스템으로 매장 운영을 효율화하세요. 
+                재고 관리부터 고객 관리, 매출 분석까지 모든 기능을 하나의 
+                시스템에서 통합 관리할 수 있습니다.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                  <span className="text-sm text-slate-600">실시간 재고 관리</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <span className="text-sm text-slate-600">매출 분석 리포트</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span className="text-sm text-slate-600">고객 관리 시스템</span>
+                </div>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="relative overflow-hidden rounded-lg shadow-xl">
+                {/* 이미지 placeholder - 실제 POS 시스템 이미지로 교체 예정 */}
+                <div className="w-full h-96 bg-gradient-to-br from-orange-100 to-red-200 flex items-center justify-center">
+                  <div className="text-center text-slate-500">
+                    <div className="w-16 h-16 bg-orange-200 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                      <Monitor className="w-8 h-8 text-orange-600" />
+                    </div>
+                    <p className="text-sm">POS 시스템 이미지</p>
+                    <p className="text-xs mt-1">추천: 매장에서 사용 중인 POS 화면</p>
+                  </div>
+                </div>
+              </div>
+              {/* 데코레이션 요소 */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-orange-500 rounded-full opacity-10"></div>
+              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-red-500 rounded-full opacity-10"></div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* 주요 기능 */}
       <section className="mb-12">
