@@ -7,6 +7,7 @@ import {
   Settings,
   Monitor,
 } from "lucide-react";
+import Image from "next/image";
 import PageHeader from "@/components/PageHeader";
 
 export const metadata: Metadata = {
@@ -52,16 +53,13 @@ export default function PosPage() {
             </div>
             <div className="relative">
               <div className="relative overflow-hidden rounded-lg shadow-xl">
-                {/* 이미지 placeholder - 실제 POS 시스템 이미지로 교체 예정 */}
-                <div className="w-full h-96 bg-gradient-to-br from-orange-100 to-red-200 flex items-center justify-center">
-                  <div className="text-center text-slate-500">
-                    <div className="w-16 h-16 bg-orange-200 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                      <Monitor className="w-8 h-8 text-orange-600" />
-                    </div>
-                    <p className="text-sm">POS 시스템 이미지</p>
-                    <p className="text-xs mt-1">추천: 매장에서 사용 중인 POS 화면</p>
-                  </div>
-                </div>
+                <Image
+                  src="/webpos.webp"
+                  alt="유통포스 프로그램 화면"
+                  width={600}
+                  height={400}
+                  className="w-full h-[400px] object-contain bg-gray-50"
+                />
               </div>
               {/* 데코레이션 요소 */}
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-orange-500 rounded-full opacity-10"></div>
@@ -72,7 +70,7 @@ export default function PosPage() {
       </section>
 
       {/* 주요 기능 */}
-      <section className="mb-12">
+      <section className="mb-12 mt-16">
         <h2 className="text-2xl font-bold text-slate-800 mb-6 text-center">
           주요 기능
         </h2>
@@ -102,6 +100,17 @@ export default function PosPage() {
           </div>
         </div>
       </section>
+
+      {/* Delphi 이미지 */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+        <Image
+          src="/delphipos.png"
+          alt="Delphi 개발 환경"
+          width={600}
+          height={400}
+          className="w-full h-[400px] object-contain bg-gray-50"
+        />
+      </div>
 
       {/* 시스템 특징 */}
       <section className="mb-12">
